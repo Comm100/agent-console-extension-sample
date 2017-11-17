@@ -12,7 +12,7 @@ Comm100AgentConsoleAPI.onReady = function () {
 
 ## What APIs We Provide
 
-We provides 4 fundamental APIs to help you interact with the Comm100 Agent Console.
+We provide 4 fundamental APIs to help you interact with the Comm100 Agent Console.
 
 1. GET
 
@@ -48,7 +48,7 @@ To get necessary information, you can use `Comm100AgentConsoleAPI.get`:
 
   ```javascript
   /**
-   * @param {string} type - name of event
+   * @param {string} type - Name of event
    * @param {function} callback - Callback function. Params will be provided accordingly. Callback
    * will be triggered after event, which means callback cannot prevent default behavior of event
    * from happening.
@@ -62,7 +62,7 @@ To get necessary information, you can use `Comm100AgentConsoleAPI.get`:
 
   ```javascript
   /**
-   * @param {string} name - name of action
+   * @param {string} name - Name of action
    * @param {...any} args - Any args required
    * @return {Promise<void>} Return promise to indicate if action is done successfully
    */
@@ -84,7 +84,7 @@ To get necessary information, you can use `Comm100AgentConsoleAPI.get`:
     name: '', // string
     email: '',// string
     status: '', // string, waiting for chat/chatting/prechat/inviting/offline message/refused by agent/refused by visitor/chat ended/in site/out of site/transferring/system processing
-    enterSiteTime: 1502934947,  //number, unix time
+    enterSiteTime: 1502934947,  // number, unix time
     referrer: '', // string, the referrer url
     landingPage: {
       title: '',  // string
@@ -204,7 +204,7 @@ You can add one more tab in the My Chat tab in the Agent Console, please specify
 
 ## get/set
 
-1. Get the Information of Current Chats
+1. Get the Information of Current Chat
 
   ```javascript
   /** @type {object(chat)} **/
@@ -213,7 +213,7 @@ You can add one more tab in the My Chat tab in the Agent Console, please specify
   });
   ```
 
-2. Get the Information of the Current Chatting Visitors 
+2. Get the Information of the Current Chatting Visitor 
 
   ```javascript
   /** @type {object(visitor)}**/
