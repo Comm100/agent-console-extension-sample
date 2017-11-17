@@ -1,0 +1,28 @@
+body
+{
+    height: 100%;
+    margin: 20px 15px;
+    background: #fafafa;
+    font-family: 'SourceSans Pro', Arial;
+    font-size: 15px;
+}
+.title
+{
+    font-weight: 600;
+    line-height: 17px;
+    font-family: 'SourceSans Pro Bold';
+    color: #000000;
+}
+.content
+{
+    margin-top: 20px;
+    line-height: 20px;
+}
+dt
+{
+    color: #888888;;
+}
+dt, dd
+{
+    display: inline-block;
+}
