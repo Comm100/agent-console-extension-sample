@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 	<meta charset="UTF-8">
+		<title>Salesforce Knowledge Base</title>
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <link rel="stylesheet" type="text/css" href="./css/comm100SDK.css">
+	</head>
+	<body>
+        <div id="main" class="status-loading">
+            <div id="error"></div>
+            <div id="login">
+                <p>You are not logged into your account.</p>
+                <div class="container-align-center">
+                    <a href="javascript:void(0)" id="connect" class="ext-btn-blue">Connect to Salesforce</a>
+                </div>
+            </div>
+            <div id="listView">
+                <div class="ext-component-search search">
+                    <input type="text" class="ext-component-search-input" id="keyWord" placeholder="Search Knowledge...">
+                    <i class="ext-component-search-btnclear" id="clearBtn"></i>
+                    <i class="ext-component-search-btnsearch" id="searchBtn"></i>
+                </div>
+                <div id="articles"></div>
+                <div class="errorMsg" id="searchMsg" style="display: none"></div>
+                <div id="dataLoading" style="display: none">
+                    <div class="container-align-center"><img src="./img/loading_blue.gif"/></div>
+                </div>
+                <div class="foot">
+                    <a href="javascript:void(0)" id="moreBtn" class="ext-btn-normal disabled">Show more Articles</a>
+                </div>      
+            </div>
+            <div id="detailView">
+                <div class="title_container ext-component-header">
+                    <i class="ext-btn-back" id="backBtn"></i>
+                    <h2 id="detailTitle"></h2>
+                </div>
+                <div class="errorMsg" id="detailMsg" style="display: none"></div>
+                <div class="cotent_container"><p id="detailContent"></p></div>
+                <div class="btn_container">
+                    <i class="btn ext-btn-normal" id="insertBtn">Insert Content</i>
+                </div>
+            </div>
+            <div id="loading">
+                <div class="container-align-center"><img src="./img/loading_blue.gif"/></div>
+            </div>
+        </div>        
+        <script type="text/javascript" src="./js/salesforceOauth.js"></script>
+        <script type="text/javascript" src="./js/textversion.min.js"></script>
+		<script type="text/javascript" src="./js/comm100SDK.js"></script>
+        <script type="text/javascript" src="./js/main.js"></script>   
+    </body>
+</html>

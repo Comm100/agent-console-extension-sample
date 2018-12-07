@@ -1,0 +1,11 @@
+{
+	"name": "Salesforce Knowledge V1.0",
+	"index": "/index.html",
+	"icon": "/icon.png",
+	"author": {
+		"name": "Comm100",
+		"email": "support@comm100.com"
+	},
+	"version": "1.0",
+	"manifestVersion": "1.0"
+}
