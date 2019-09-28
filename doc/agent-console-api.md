@@ -255,10 +255,10 @@ You can add one more tab in the My Chat tab in the Agent Console, please specify
 
   ```javascript
   /** @param {object(chat)} chat **/
-  Comm100AgentConsoleAPI.on('agentconsole.chats.chatStart', function(chat) {});
+  Comm100AgentConsoleAPI.on('agentconsole.chats.chatStarted', function(chat) {});
 
   /** @param {object(chat)} chat **/
-  Comm100AgentConsoleAPI.on('agentconsole.chats.chatEnd', function(chat) {}); 
+  Comm100AgentConsoleAPI.on('agentconsole.chats.chatEnded', function(chat) {}); 
   ```
 
 2. Current Chatting Visitor Changes Status
