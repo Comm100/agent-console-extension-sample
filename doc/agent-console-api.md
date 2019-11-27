@@ -80,7 +80,7 @@ To get necessary information, you can use `Comm100AgentConsoleAPI.get`:
   ```javascript
   // visitor
   const visitor = {
-    id: 1,    // number
+    id: 'e2e3ecc9-fa03-4df2-842a-f08f1d60e36b',    // guid
     name: '', // string
     email: '',// string
     status: '', // string, waiting for chat/chatting/prechat/inviting/offline message/refused by agent/refused by visitor/chat ended/in site/out of site/transferring/system processing
@@ -126,8 +126,8 @@ To get necessary information, you can use `Comm100AgentConsoleAPI.get`:
 
   // chat
   const chat = {
-    id: 1,  // number
-    visitorId: 1, // number
+    id: '68dab65b-0726-4087-886d-a1bf4886eed8',  // guid
+    visitorId: 'e2e3ecc9-fa03-4df2-842a-f08f1d60e36b', // guid
     status: ''  // string,  chatting/waiting/transferring/chat ended/audio chatting/video chatting/inviting
     name: '',     // string
     email: '',    // string 
@@ -195,8 +195,8 @@ You can add one more tab in the My Chat tab in the Agent Console, please specify
 
   ```javascript
   /** @type {object(agent)} **/
-  Comm100AgentConsoleAPI.get('agentconsole.currentAgent').then(function(agent){
-
+  Comm100AgentConsoleAPI.get('agentconsole.currentAgent').then(function(args){
+      const agent = args.data;
   });
   ```
 
@@ -208,8 +208,8 @@ You can add one more tab in the My Chat tab in the Agent Console, please specify
 
   ```javascript
   /** @type {object(chat)} **/
-  Comm100AgentConsoleAPI.get('agentconsole.currentChat').then(function(chat){
-
+  Comm100AgentConsoleAPI.get('agentconsole.currentChat').then(function(args){
+      const chat = args.data;
   });
   ```
 
@@ -217,8 +217,8 @@ You can add one more tab in the My Chat tab in the Agent Console, please specify
 
   ```javascript
   /** @type {object(visitor)}**/
-  Comm100AgentConsoleAPI.get('agentconsole.currentChat.visitor').then(function(visitor){
-    
+  Comm100AgentConsoleAPI.get('agentconsole.currentChat.visitor').then(function(args){
+      const visitor = args.data;
   });
   ```
 
@@ -255,38 +255,50 @@ You can add one more tab in the My Chat tab in the Agent Console, please specify
 
   ```javascript
   /** @param {object(chat)} chat **/
-  Comm100AgentConsoleAPI.on('agentconsole.chats.chatStarted', function(chat) {});
+  Comm100AgentConsoleAPI.on('agentconsole.chats.chatStarted', function(args) {
+      const chat = args.data;
+  });
 
   /** @param {object(chat)} chat **/
-  Comm100AgentConsoleAPI.on('agentconsole.chats.chatEnded', function(chat) {}); 
+  Comm100AgentConsoleAPI.on('agentconsole.chats.chatEnded', function(args) {
+      const chat = args.data;
+  }); 
   ```
 
 2. Current Chatting Visitor Changes Status
 
   ```javascript
   /** @param {object(visitor)} visitor **/
-  Comm100AgentConsoleAPI.on('agentconsole.currentChat.visitor.status.change', function(visitor) {});
+  Comm100AgentConsoleAPI.on('agentconsole.currentChat.visitor.status.change', function(args) {
+      const visitor = args.data;
+  });
   ```
 
 3. Agent Submit the Wrap-up for Current Chat
 
   ```javascript
   /** @param {object(chat)} chat **/
-  Comm100AgentConsoleAPI.on('agentconsole.currentChat.submitWrapup', function(chat) {});
+  Comm100AgentConsoleAPI.on('agentconsole.currentChat.submitWrapup', function(args) {
+      const chat = args.data;
+  });
   ```
 
 4. Current Selected Chat Changes
 
   ```javascript
   /** @param {object(chat)} chat **/
-  Comm100AgentConsoleAPI.on('agentconsole.currentChat.selectChange', function(chat) { });
+  Comm100AgentConsoleAPI.on('agentconsole.currentChat.selectChange', function(args) {
+      const chat = args.data;
+  });
   ```
 
 5. Current Selected Chat Receives Visitor Message
 
   ```javascript
   /** @param {string} message **/
-  Comm100AgentConsoleAPI.on('agentconsole.currentChat.receiveVisitorMessage', function(message) { });
+  Comm100AgentConsoleAPI.on('agentconsole.currentChat.receiveVisitorMessage', function(args) {
+      const message = args.data;
+  });
   ```
 
 # Action
