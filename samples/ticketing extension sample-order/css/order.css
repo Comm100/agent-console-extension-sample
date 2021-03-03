@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "SourceSans Pro Bold";
+  src: url(../fonts/SourceSansPro-Semibold.woff) format("woff");
+}
+body {
+  font-family: "SourceSans Pro Bold", "Microsoft YaHei", Arial, sans-serif;
+}
+
+.item-detail {
+  padding-top: 15px;
+}
+
+.item-list-item + .item-list-item {
+  padding-top: 3px;
+}
+
+.item-field {
+  color: #666;
+}

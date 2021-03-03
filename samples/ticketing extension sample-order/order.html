@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=10,11" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <title>Order</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      .container {
+        padding: 10px;
+        font-size: 14px;
+        overflow: scroll;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      h3 {
+        margin: 5px 0;
+      }
+      .hide {
+        display: none;
+      }
+    </style>
+    <link href="./css/order.css" rel="stylesheet" />
+    <script type="text/javascript" src="./js/comm100.sdk.js"></script>
+    <script type="text/javascript">
+      Comm100AgentConsoleAPI.onReady(function () {
+        Comm100AgentConsoleAPI.init();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        <h3>Orders</h3>
+        <ul class="item-detail">
+          <li class="item-list-item">
+            <span class="item-field">Order ID:</span>
+            <span class="item-content">JH45DE</span>
+          </li>
+          <li class="item-list-item">
+            <span class="item-field">Order Created Date:</span>
+            <span class="item-content">22-09-2020</span>
+          </li>
+          <li class="item-list-item">
+            <span class="item-field">Contact Name:</span>
+            <span class="item-content" id="contact-name"></span>
+          </li>
+          <li class="item-list-item">
+            <span class="item-field">Contact Identity:</span>
+            <span class="item-content" id="contact-identity"></span>
+          </li>
+          <li class="item-list-item">
+            <span class="item-field">Items:</span>
+            <span class="item-content">5</span>
+          </li>
+          <li class="item-list-item">
+            <span class="item-field">Total Amount:</span>
+            <span class="item-content">$54</span>
+          </li>
+          <li class="item-list-item">
+            <span class="item-field">Payment Method:</span>
+            <span class="item-content">Credit Card</span>
+          </li>
+        </ul>
+      </div>
+      <script src="./js/order.js"></script>
+  </body>
+</html>

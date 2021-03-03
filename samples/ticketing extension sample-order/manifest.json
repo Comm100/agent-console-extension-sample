@@ -1,0 +1,13 @@
+{
+  "name": "Orders",
+  "index": "./order.html",
+  "icon": "./icon.png",
+  "location": ["ticket_custom_tab", "livechat_custom_tab"],
+  "pageMode": "single",
+  "author": {
+    "name": "Comm100",
+    "email": "support@comm100.com"
+  },
+  "version": "1.1",
+  "manifestVersion": "1.0"
+}
