@@ -5,6 +5,7 @@ export interface Ticket {
   relatedType: "contact" | "visitor" | "agent";
   contactOrVisitor?: Contact | Visitor;
   relatedId: number;
+  lastMessage: Message;
   lastMessageId: number;
   lastMessageChannelId: string;
   lastMessageChannelAccountId: string;
@@ -14,10 +15,8 @@ export interface Ticket {
   originalId: string;
   status: "new" | "pendingInternal" | "pendingExternal" | "onHold" | "resolved";
   priority: "urgent" | "high" | "normal" | "low";
-  assignedType: "agent" | "bot";
-  assignedBotId: string;
-  assignedAgentId: number;
-  assignedDepartmentId: string;
+  assignedAgent: AgentAssignee;
+  assignedDepartment: DepartmentAssignee;
   lastStatusChangedAt: ISO8601TimeFormat;
   lastUpdatedAt: ISO8601TimeFormat;
   isEditable: boolean;
@@ -51,29 +50,32 @@ export interface Ticket {
   resolveBreachAt: ISO8601TimeFormat;
   nextSLABreachAt: ISO8601TimeFormat;
   totalReplies: number;
+  screenAvatar: string;
+  screenName: string;
+  screenValue: string;
+  timeStamp: number;
 }
 
 export interface Agent {
-  id: number;
+  apikey: string;
+  chats: number;
   email: string;
-  displayName: string;
-  firstName: string;
-  lastName: string;
+  id: number;
   isAdmin: boolean;
-  isActive: boolean;
-  phone: string;
-  title: string;
-  bio: string;
-  timeZone: string;
-  datetimeFormat: string;
-  createdTime: ISO8601TimeFormat;
-  isLocked: boolean;
-  lockedTime: ISO8601TimeFormat;
-  lastLoginTime: ISO8601TimeFormat;
-  roleIds: number[];
-  departmentIds: string[];
-  permissionIds: number[];
-  shiftIds: string[];
+  name: string;
+  status: string;
+}
+
+export interface AgentAssignee {
+  id: number;
+  name: string;
+  type: "agent" | "bot";
+  email?: string;
+}
+
+export interface DepartmentAssignee {
+  id: string;
+  name: string;
 }
 
 export interface Message {
