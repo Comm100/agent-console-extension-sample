@@ -2,7 +2,7 @@
 
 ## Agent
 
-### Get current [agent](./dataStructure.ts#L56)
+### Get current [agent](./dataStructure.ts#L59)
 
 ```typescript
 const agent: Agent = Comm100AgentConsoleAPI.get("agentconsole.currentAgent");
@@ -28,10 +28,12 @@ Comm100AgentConsoleAPI.set(
 );
 ```
 
-### Get and set the `contact` of current ticket
+### Get and set the [contact](./dataStructure.ts#L138) of current ticket
 
 ```javascript
-Comm100AgentConsoleAPI.get("agentconsole.ticketing.currentTicket.contact");
+const contact: Contact = Comm100AgentConsoleAPI.get(
+  "agentconsole.ticketing.currentTicket.contact"
+);
 //Only the ID of the contact can be set
 Comm100AgentConsoleAPI.set(
   "agentconsole.ticketing.currentTicket.contact",
@@ -43,10 +45,10 @@ Comm100AgentConsoleAPI.set("agentconsole.ticketing.currentTicket.contact", {
 });
 ```
 
-### Get and set the `department assignee` of current ticket
+### Get and set the [department assignee](./dataStructure.ts#L76) of current ticket
 
 ```javascript
-Comm100AgentConsoleAPI.get(
+const departmentAssignee: DepartmentAssignee = Comm100AgentConsoleAPI.get(
   "agentconsole.ticketing.currentTicket.departmentAssignee"
 );
 //Only the ID of the department can be set
@@ -61,10 +63,10 @@ Comm100AgentConsoleAPI.set(
 );
 ```
 
-### Get and set the `agent assignee` of current ticket
+### Get and set the [agent assignee](./dataStructure.ts#L69) of current ticket
 
 ```javascript
-Comm100AgentConsoleAPI.get(
+const agentAssignee: AgentAssignee = Comm100AgentConsoleAPI.get(
   "agentconsole.ticketing.currentTicket.agentAssignee"
 );
 //Only the ID of the agent can be set
@@ -184,7 +186,7 @@ Comm100AgentConsoleAPI.on(
 );
 ```
 
-see [ChangeEvent](./dataStructure.ts#L194) definition.
+see [ChangeEvent](./dataStructure.ts#L196) definition.
 
 # Action
 
