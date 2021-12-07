@@ -120,7 +120,8 @@ To get necessary information, you can use `Comm100AgentConsoleAPI.get`:
         name: '', // string
         value: '',// string
       },
-    ]
+    ],
+    ssoId: null | '',    // string, the id returned when visitor single sign-on
   }
 
 
